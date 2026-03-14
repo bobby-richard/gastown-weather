@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather | Alpine Print</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Weekend briefing</p>
+          <h1>Alpine weather, edited for the ridgeline.</h1>
+          <p class="lede">
+            A crisp editorial weather dashboard with cobalt sky, pine contrast,
+            and warm sunburst highlights.
+          </p>
+        </div>
+
+        <div class="masthead-actions">
+          <div class="unit-toggle" role="tablist" aria-label="Temperature units">
+            <button class="toggle-chip is-active" data-unit="f" aria-selected="true">°F</button>
+            <button class="toggle-chip" data-unit="c" aria-selected="false">°C</button>
+          </div>
+          <button class="sun-pill">Bluebird Alert</button>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="hero-card card">
+          <div class="hero-copy">
+            <p class="card-label">Now in Aspen Highlands</p>
+            <div class="hero-temp-row">
+              <span class="hero-temp" data-temp-f="29" data-temp-c="-2">29</span>
+              <span class="hero-unit">°</span>
+            </div>
+            <p class="hero-condition">Light snow, high visibility, calm winds from the northwest.</p>
+            <div class="hero-metrics">
+              <div>
+                <span class="metric-label">Feels like</span>
+                <strong data-temp-f="23" data-temp-c="-5">23°</strong>
+              </div>
+              <div>
+                <span class="metric-label">Snowfall</span>
+                <strong>3.1 in</strong>
+              </div>
+              <div>
+                <span class="metric-label">Sunrise</span>
+                <strong>6:18 AM</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="sun-disc"></div>
+            <div class="ridge ridge-back"></div>
+            <div class="ridge ridge-front"></div>
+            <div class="forecast-badge">
+              <span class="badge-title">Storm line</span>
+              <strong>Clears by 14:00</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="rail">
+          <article class="card stat-card">
+            <p class="card-label">Trail conditions</p>
+            <h2>Powder window holds through midday.</h2>
+            <p>Fresh coverage on north aspects. Packed groomers on lower mountain.</p>
+          </article>
+
+          <article class="card stat-card accent">
+            <p class="card-label">Travel note</p>
+            <h2>Loveland Pass</h2>
+            <p>Chains advised after 5 PM. Dry approach from the valley floor.</p>
+          </article>
+        </section>
+
+        <section class="card forecast-card">
+          <div class="section-head">
+            <div>
+              <p class="card-label">3-day outlook</p>
+              <h2>Fast reads for the next weather turn.</h2>
+            </div>
+            <div class="daypart-toggle" role="tablist" aria-label="Forecast focus">
+              <button class="toggle-chip is-active" data-daypart="day" aria-selected="true">Day</button>
+              <button class="toggle-chip" data-daypart="night" aria-selected="false">Night</button>
+            </div>
+          </div>
+
+          <div class="forecast-grid">
+            <article class="forecast-panel" data-day-temp-f="34" data-day-temp-c="1" data-night-temp-f="19" data-night-temp-c="-7">
+              <p class="forecast-day">Saturday</p>
+              <strong class="forecast-temp">34°</strong>
+              <p class="forecast-text" data-day-copy="Bright intervals, soft wind, fresh snow underfoot." data-night-copy="Clear and sharp, freeze settles in by midnight.">
+                Bright intervals, soft wind, fresh snow underfoot.
+              </p>
+            </article>
+            <article class="forecast-panel" data-day-temp-f="31" data-day-temp-c="-1" data-night-temp-f="17" data-night-temp-c="-8">
+              <p class="forecast-day">Sunday</p>
+              <strong class="forecast-temp">31°</strong>
+              <p class="forecast-text" data-day-copy="Cloud bands return with quick flurries after lunch." data-night-copy="Patchy snow showers taper into a cold, dry night.">
+                Cloud bands return with quick flurries after lunch.
+              </p>
+            </article>
+            <article class="forecast-panel" data-day-temp-f="38" data-day-temp-c="3" data-night-temp-f="24" data-night-temp-c="-4">
+              <p class="forecast-day">Monday</p>
+              <strong class="forecast-temp">38°</strong>
+              <p class="forecast-text" data-day-copy="Bluebird reset with stronger sun and softer afternoon snow." data-night-copy="Thin cloud cover, quieter wind, moderate overnight chill.">
+                Bluebird reset with stronger sun and softer afternoon snow.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card story-strip">
+          <div>
+            <p class="card-label">Field notes</p>
+            <h2>Mountain weather with print-magazine pacing.</h2>
+          </div>
+          <div class="story-points">
+            <p><span>Visibility</span> Ridge lines stay readable into early afternoon.</p>
+            <p><span>Wind</span> Sheltered bowls hold softer snow and less drift.</p>
+            <p><span>Sun</span> Late-day glow lifts contrast against the cloud deck.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

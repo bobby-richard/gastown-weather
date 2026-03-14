@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citrus Sunrise Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="app-card">
+      <section class="hero panel glow-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Saturday 13 March</p>
+          <h1>Warm front over Charleston</h1>
+          <p class="hero-summary">A saturated sunrise palette for a weather-first dashboard with cleaner hierarchy, clearer contrast, and brighter accent surfaces.</p>
+        </div>
+        <div class="current-temp">
+          <span class="temp-value">72°</span>
+          <span class="temp-meta">Feels like 76°</span>
+          <span class="temp-meta">Sunrise at 6:29 AM</span>
+        </div>
+      </section>
+
+      <section class="grid-layout">
+        <article class="panel forecast-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Hourly outlook</p>
+            <h2>Steady heat, light coastal wind</h2>
+          </div>
+          <div class="hour-strip">
+            <div class="hour-card active">
+              <span>Now</span>
+              <strong>72°</strong>
+              <small>Sunny</small>
+            </div>
+            <div class="hour-card">
+              <span>10 AM</span>
+              <strong>75°</strong>
+              <small>Bright</small>
+            </div>
+            <div class="hour-card">
+              <span>1 PM</span>
+              <strong>79°</strong>
+              <small>Dry</small>
+            </div>
+            <div class="hour-card">
+              <span>4 PM</span>
+              <strong>78°</strong>
+              <small>Breezy</small>
+            </div>
+            <div class="hour-card">
+              <span>8 PM</span>
+              <strong>71°</strong>
+              <small>Clear</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel metrics-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Conditions</p>
+            <h2>Balanced for fast scanning</h2>
+          </div>
+          <div class="metric-list">
+            <div class="metric-card">
+              <span>UV index</span>
+              <strong>8</strong>
+              <small>High by noon</small>
+            </div>
+            <div class="metric-card">
+              <span>Humidity</span>
+              <strong>61%</strong>
+              <small>Moderate</small>
+            </div>
+            <div class="metric-card">
+              <span>Wind</span>
+              <strong>11 mph</strong>
+              <small>SE gusts</small>
+            </div>
+            <div class="metric-card">
+              <span>Rain chance</span>
+              <strong>6%</strong>
+              <small>Dry pattern</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel radar-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Weekly arc</p>
+            <h2>Color-blocked temperature trend</h2>
+          </div>
+          <div class="trend">
+            <div class="trend-day">
+              <span>Sat</span>
+              <div class="bar warm" style="--size: 82%"></div>
+              <strong>72°</strong>
+            </div>
+            <div class="trend-day">
+              <span>Sun</span>
+              <div class="bar bright" style="--size: 92%"></div>
+              <strong>78°</strong>
+            </div>
+            <div class="trend-day">
+              <span>Mon</span>
+              <div class="bar warm" style="--size: 88%"></div>
+              <strong>75°</strong>
+            </div>
+            <div class="trend-day">
+              <span>Tue</span>
+              <div class="bar soft" style="--size: 68%"></div>
+              <strong>68°</strong>
+            </div>
+            <div class="trend-day">
+              <span>Wed</span>
+              <div class="bar soft" style="--size: 73%"></div>
+              <strong>70°</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electric Stormglass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="storm-grid" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <header class="hero panel">
+        <div>
+          <p class="eyebrow">Live weather view</p>
+          <h1>Electric stormglass</h1>
+          <p class="hero-copy">
+            High-contrast forecast tracking with vivid modules, neon rain
+            signals, and a weather-first layout.
+          </p>
+        </div>
+
+        <div class="hero-meta">
+          <p class="stamp">Jasper Bay</p>
+          <p id="timestamp" class="timestamp">Updated just now</p>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="current panel">
+          <div class="section-heading">
+            <p class="eyebrow">Current conditions</p>
+            <button id="units-toggle" class="ghost-button" type="button">
+              Switch to F
+            </button>
+          </div>
+
+          <div class="current-grid">
+            <div>
+              <p class="sky-state">Charged rainfall</p>
+              <div class="temperature-row">
+                <span id="temperature" class="temperature">18</span>
+                <span class="unit" id="unit-label">°C</span>
+              </div>
+              <p class="feels-like">Feels like 16° with sea wind and static drizzle.</p>
+            </div>
+
+            <div class="storm-orb" aria-hidden="true">
+              <div class="orb-core"></div>
+            </div>
+          </div>
+
+          <div class="metrics-row">
+            <article class="metric-card">
+              <p>Wind</p>
+              <strong>28 km/h</strong>
+              <span>NE gusting to 41</span>
+            </article>
+            <article class="metric-card">
+              <p>Humidity</p>
+              <strong>82%</strong>
+              <span>Rain bands holding</span>
+            </article>
+            <article class="metric-card">
+              <p>Visibility</p>
+              <strong>6.4 km</strong>
+              <span>Lightning haze offshore</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="hourly panel">
+          <div class="section-heading">
+            <p class="eyebrow">Pulse forecast</p>
+            <p class="microcopy">3-hour rain intensity</p>
+          </div>
+
+          <div class="forecast-strip">
+            <article class="forecast-pill active">
+              <span>Now</span>
+              <strong>Heavy</strong>
+              <small>92%</small>
+            </article>
+            <article class="forecast-pill">
+              <span>21:00</span>
+              <strong>Flash</strong>
+              <small>84%</small>
+            </article>
+            <article class="forecast-pill">
+              <span>22:00</span>
+              <strong>Rain</strong>
+              <small>71%</small>
+            </article>
+            <article class="forecast-pill">
+              <span>23:00</span>
+              <strong>Mist</strong>
+              <small>48%</small>
+            </article>
+          </div>
+        </section>
+
+        <section class="radar panel">
+          <div class="section-heading">
+            <p class="eyebrow">Storm cells</p>
+            <p class="microcopy">Animated threat sketch</p>
+          </div>
+
+          <div class="radar-stage" role="img" aria-label="Stylized storm radar">
+            <div class="ring ring-a"></div>
+            <div class="ring ring-b"></div>
+            <div class="ring ring-c"></div>
+            <div class="sweep"></div>
+            <div class="cell cell-a"></div>
+            <div class="cell cell-b"></div>
+            <div class="cell cell-c"></div>
+          </div>
+        </section>
+
+        <section class="alerts panel">
+          <div class="section-heading">
+            <p class="eyebrow">Alerts</p>
+            <p class="microcopy">Actionable modules</p>
+          </div>
+
+          <div class="alert-list">
+            <article class="alert-card cyan">
+              <p class="alert-title">Coastal charge</p>
+              <strong>Lightning advisory until 23:40</strong>
+              <span>Expose less metal on boardwalk routes.</span>
+            </article>
+            <article class="alert-card blue">
+              <p class="alert-title">Rain surge</p>
+              <strong>Street flooding possible after 22:00</strong>
+              <span>Transit corridors near the harbor may slow.</span>
+            </article>
+            <article class="alert-card violet">
+              <p class="alert-title">Pressure drop</p>
+              <strong>Front easing overnight</strong>
+              <span>Calmer air expected by 01:00.</span>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desert Field Notes Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Field Log 03</p>
+          <h1>High desert weather, tracked like a notebook.</h1>
+          <p class="hero-text">
+            A warm, weather-first prototype with tactile cards, sand-washed
+            surfaces, and quick-glance forecast blocks.
+          </p>
+          <div class="hero-actions">
+            <button class="chip is-active" type="button" data-view="overview" aria-pressed="true">Overview</button>
+            <button class="chip" type="button" data-view="hourly" aria-pressed="false">Hourly</button>
+            <button class="chip" type="button" data-view="notes" aria-pressed="false">Field notes</button>
+          </div>
+        </div>
+        <section class="current panel inset">
+          <div class="current-head">
+            <div>
+              <p class="label">Now</p>
+              <h2>Santa Fe, NM</h2>
+            </div>
+            <span class="badge">Dry air</span>
+          </div>
+          <div class="current-temp-row">
+            <div>
+              <p class="temperature" id="current-temp">68°</p>
+              <p class="condition" id="current-condition">Sunny with light wind</p>
+            </div>
+            <div class="sun-glyph" aria-hidden="true"></div>
+          </div>
+          <dl class="stats-grid">
+            <div>
+              <dt>Humidity</dt>
+              <dd id="humidity">21%</dd>
+            </div>
+            <div>
+              <dt>Wind</dt>
+              <dd id="wind">9 mph</dd>
+            </div>
+            <div>
+              <dt>UV</dt>
+              <dd id="uv">7 high</dd>
+            </div>
+            <div>
+              <dt>Rain chance</dt>
+              <dd id="rain">4%</dd>
+            </div>
+          </dl>
+        </section>
+      </header>
+
+      <main class="layout">
+        <section class="panel forecast" data-panel="overview">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Five-day read</p>
+              <h2>Outlook</h2>
+            </div>
+            <p class="section-copy">
+              Rust, sage, and sky tones keep the forecast quick to scan.
+            </p>
+          </div>
+          <div class="forecast-grid" id="forecast-grid"></div>
+        </section>
+
+        <section class="panel timeline" data-panel="hourly">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Today</p>
+              <h2>Hourly arc</h2>
+            </div>
+            <p class="section-copy">Temperatures ease after sunset, wind stays mild.</p>
+          </div>
+          <div class="hourly-list" id="hourly-list"></div>
+        </section>
+
+        <aside class="stack" data-panel="notes">
+          <section class="panel notes-card">
+            <p class="eyebrow">Notebook</p>
+            <h2>Field notes</h2>
+            <ul class="notes-list" id="notes-list"></ul>
+          </section>
+
+          <section class="panel alert-card">
+            <div class="section-head compact">
+              <div>
+                <p class="eyebrow">Pattern watch</p>
+                <h2>Desert signals</h2>
+              </div>
+            </div>
+            <div class="alert-band">
+              <p class="alert-title">Evening cooldown arrives fast after 7 PM.</p>
+              <p class="alert-copy">
+                Layering matters more than rain gear today. Dry air and clear skies
+                push a sharp temperature drop overnight.
+              </p>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
